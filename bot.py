@@ -4,7 +4,9 @@ from bs4 import BeautifulSoup
 import requests
 import tokens
 
+
 COMMAND_PREFIX = '~'
+
 
 bot = commands.Bot(command_prefix=COMMAND_PREFIX, intents=discord.Intents.all())
 
@@ -30,8 +32,6 @@ def get_writer(url: 'string') -> 'writer':
     return writer[11:]
 
 
-
-
 @bot.event
 async def on_ready():
     print("i am ready to share poems!")
@@ -46,4 +46,3 @@ async def poem(ctx):
 
 
 bot.run(tokens.BOT_TOKEN)
-
